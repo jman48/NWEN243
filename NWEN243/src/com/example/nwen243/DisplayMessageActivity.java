@@ -17,9 +17,9 @@ import android.os.Build;
 public class DisplayMessageActivity extends Activity {
 	
 	public final static String ROUTEINFO = "com.example.myfirstapp.ROUTEINFO";
-	String mode;
-	String route;
-	String direction;
+	private String mode;
+	private String route;
+	private String direction;
 	
 	@SuppressLint({ "NewApi", "SetJavaScriptEnabled" })
 	@Override
@@ -27,6 +27,7 @@ public class DisplayMessageActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_message);
 		
+		//Get info from main activity
 		Intent intent = getIntent();
 		mode = intent.getStringExtra(MainActivity.MODE);
 		route = intent.getStringExtra(MainActivity.ROUTE);
@@ -80,7 +81,7 @@ public class DisplayMessageActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
+		
 	public void addToFav(View view) {
 		//Construct a list containing route information
 		EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -92,9 +93,9 @@ public class DisplayMessageActivity extends Activity {
 		routeInfo[2] = route;
 		routeInfo[3] = direction;
 		
-		Intent intent = new Intent(this, MainActivity.class);
-		intent.putExtra(ROUTEINFO, routeInfo);
-		startActivity(intent);
+		//Save in MainApp so all activity's can access the data
+		MainApp state = (MainApp)getApplicationContext();
+		state.addFav(routeInfo);		
 	}
 
 }
