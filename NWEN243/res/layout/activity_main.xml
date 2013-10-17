@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+      <TextView
+        android:id="@+id/textViewMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/modeTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+      
+    <Spinner
+    android:id="@+id/mode_spinner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" />
+    
+      <TextView
+        android:id="@+id/textViewRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/routeTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <Spinner
+    android:id="@+id/route_spinner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" />
+    
+      <TextView
+        android:id="@+id/textViewDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dirTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <Spinner
+    android:id="@+id/direction_spinner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" />
+    
+    <Button
+        android:id="@+id/findBtn"
+        android:text="@string/find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="findRoute"    />
+
+    <TextView
+        android:id="@+id/textViewFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/favTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <Spinner
+    android:id="@+id/fav_spinner"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" />
+    
+    <Button
+        android:id="@+id/goFavBtn"
+        android:text="@string/goFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="findFavRoute"    />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NWEN243</string>
+    <string name="action_settings">Settings</string>
+    
+
+    <string-array name="mode_array">
+        <item>**Please Select**</item>
+        <item>Train</item>        
+    </string-array>
+    
+    <string-array name="route_array">
+        <item>**Please Select**</item>
+        <item>HVL</item>    
+        <item>JVL</item>   
+        <item>KPL</item>   
+        <item>MEL</item>   
+        <item>NEX</item>   
+        <item>PNL</item>   
+        <item>WRL</item>       
+    </string-array>
+    
+    <string-array name="direction_array">
+        <item>**Please Select**</item>
+        <item>inbound</item> 
+        <item>outbound</item>        
+    </string-array>
+
+    <string name="title_activity_display_message">My Message</string>
+    <string name="modeTitle">Mode</string>
+    <string name="routeTitle">Route</string>
+    <string name="dirTitle">Direction</string>
+    <string name="favTitle">Favorites</string>
+    <string name="setFav">Add to Favorites</string>
+    <string name="find">Find Route</string>
+    <string name="rotueMsg">Add a name for this rotue</string>
+    <string name="goFav">Go</string>
+
+</resources>
